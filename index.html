@@ -97,8 +97,12 @@
               <a class="nav-link" href="#">Jobs</a>
             </li>
           </ul> 
-
+      
           <ul class="navbar-nav ms-auto mb-lg-0">
+            <li class="nav-but">
+              <button onclick = "changeMode()" id = "button"> Dark Mode </button>
+
+            </li> &NonBreakingSpace;
             <li class="nav-but">
               <a class="btn btn-outline-light" href="index1.html">Login</a>&nbsp;
             </li>
@@ -106,7 +110,7 @@
               <a class="btn btn-outline-light" href="index2.html">SignUp</a>
             </li>
           </ul>
-        
+          
       </div>
     </div>
     </nav>
@@ -294,6 +298,23 @@ dropdowns.forEach((dd)=>{
     })
 })
   </script>
+   <script>
+    function changeMode() {
+       var body = document.body;
+       
+       // toggle the theme
+       body.classList.toggle("dark-theme");
+       let button = document.getElementById('button');
+       
+       // change the button text
+       if (button.innerHTML == "Dark Mode") {
+          button.innerHTML = "Normal Mode";
+       } else {
+          button.innerHTML = "Dark Mode"
+       }
+    }
+ </script>
+  
 </body>
 <footer style="background-color: black;">
   <div class="container text-center">
